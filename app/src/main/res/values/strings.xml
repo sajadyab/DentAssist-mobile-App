@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">DentAssist</string>
+    <string name="navigation_drawer_open">Open navigation menu</string>
+    <string name="navigation_drawer_close">Close navigation menu</string>
+
+    <string-array name="country_codes">
+        <item>🇱🇧 +961</item>
+        <item>🇺🇸 +1</item>
+        <item>🇨🇦 +1</item>
+        <item>🇬🇧 +44</item>
+        <item>🇫🇷 +33</item>
+        <item>🇩🇪 +49</item>
+        <item>🇮🇹 +39</item>
+        <item>🇪🇸 +34</item>
+        <item>🇨🇳 +86</item>
+        <item>🇮🇳 +91</item>
+        <item>🇵🇰 +92</item>
+        <item>🇯🇵 +81</item>
+        <item>🇰🇷 +82</item>
+        <item>🇦🇺 +61</item>
+        <item>🇧🇷 +55</item>
+        <item>🇪🇬 +20</item>
+        <item>🇿🇦 +27</item>
+        <item>🇦🇪 +971</item>
+        <item>🇸🇦 +966</item>
+    </string-array>
+
+    <string-array name="priority_options">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Emergency</item>
+    </string-array>
+
+
+
+</resources>

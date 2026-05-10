@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ==================== BASE STYLES FOR INCOMPLETE REFERENCES ==================== -->
+    <style name="TextAppearance.DentAssist" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="Widget.DentAssist" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <!-- ==================== TYPOGRAPHY STYLES ==================== -->
+    <style name="TextAppearance.DentAssist.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.DentAssist.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.DentAssist.CardHeader" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.DentAssist.CardHeaderTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.DentAssist.Welcome" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.DentAssist.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.DentAssist.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- ==================== WIDGET STYLES ==================== -->
+    <style name="Widget.DentAssist.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface_white</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">16dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.DentAssist.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeColor">@color/box_stroke_color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <style name="Widget.DentAssist.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="backgroundTint">@color/primary</item>
+    </style>
+
+    <style name="Widget.DentAssist.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.DentAssist.Chip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="chipBackgroundColor">@color/surface_variant</item>
+        <item name="chipCornerRadius">20dp</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="rippleColor">@color/primary_light</item>
+    </style>
+
+    <!-- Card with Blue Header - NO top padding -->
+    <style name="Widget.DentAssist.CardView.BlueHeader" parent="Widget.DentAssist.CardView">
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingBottom">16dp</item>
+    </style>
+
+    <!-- Blue Header Style - FULL WIDTH -->
+    <style name="Widget.DentAssist.BlueHeader">
+        <item name="android:background">@drawable/gradient_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">-16dp</item>
+        <item name="android:layout_marginEnd">-16dp</item>
+    </style>
+
+    <!-- Blue Header Title -->
+    <style name="TextAppearance.DentAssist.BlueHeaderTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Catch any misspelled references -->
+    <style name="Widget.Dentassist" parent="Widget.DentAssist.CardView" />
+    <style name="Widget.Dentssist" parent="Widget.DentAssist.CardView" />
+
+    <!-- Override TextInputEditText globally -->
+    <style name="Widget.DentAssist.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <style name="RoundedDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@drawable/dialog_rounded_background</item>
+    </style>
+
+    <style name="OwoDetailRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingVertical">8dp</item>
+    </style>
+
+    <style name="OwoLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minWidth">100dp</item>
+    </style>
+
+    <style name="OwoValue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

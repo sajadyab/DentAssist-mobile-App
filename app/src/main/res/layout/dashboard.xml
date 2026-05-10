@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ==================== WELCOME HEADER CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardWelcomeHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Background with Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:gravity="center">
+
+                        <!-- Welcome Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome back,"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:alpha="0.9"
+                            android:gravity="center"
+                            android:textStyle="bold"/>
+
+                        <!-- Patient Name -->
+                        <TextView
+                            android:id="@+id/tvPatientName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Fadya Alama"
+                            android:textColor="@color/surface_white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <!-- Stats Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/memberSince"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member since Apr 2026"
+                                android:textColor="@color/text_primary"
+                                android:textSize="11sp"
+                                android:alpha="0.8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="·"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:alpha="0.8" />
+
+                            <TextView
+                                android:id="@+id/lastVisit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Last visit: Never"
+                                android:textColor="@color/text_primary"
+                                android:textSize="11sp"
+                                android:alpha="0.8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:text="·"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                 />
+
+                            <TextView
+                                android:id="@+id/nbrOfVisits"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 visits"
+                                android:textColor="@color/text_primary"
+                                android:textSize="11sp"
+                                 />
+
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:alpha="0.3"
+                            android:background="@color/text_primary" />
+
+                        <!-- Referral Message -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Share your referral code with friends"
+                            android:textColor="@color/surface_white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="to earn bonus points!"
+                            android:textColor="@color/surface_white"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== STATS BADGES ROW 1 ==================== -->
+
+            <LinearLayout
+                android:id="@+id/layoutStatsRow1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardWelcomeHeader">
+
+                <!-- Total Visits Badge -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/surface_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Visits"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalVisits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="0"
+                            android:textColor="@color/accent_green"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Points Earned Badge -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/surface_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Points Earned"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvPointsEarned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="0"
+                            android:textColor="@color/accent_yellow"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- ==================== STATS BADGES ROW 2 ==================== -->
+
+            <LinearLayout
+                android:id="@+id/layoutStatsRow2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutStatsRow1">
+
+                <!-- Referrals Made Badge -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/surface_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Referrals Made"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvReferralsMade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="0"
+                            android:textColor="@color/primary"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Subscription Badge -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/surface_white">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subscription"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvSubscriptionStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginBottom="6dp"
+                            android:text="None"
+                            android:textColor="@color/accent_red"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- ==================== NEXT APPOINTMENT CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNextAppointment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPadding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutStatsRow2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next Appointment"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content - Shows real data when available, placeholder when not -->
+                    <LinearLayout
+                        android:id="@+id/layoutNextApptContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:gravity="center">
+
+                        <!-- Placeholder (shown when no appointment) -->
+                        <LinearLayout
+                            android:id="@+id/layoutNoAppointment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No upcoming appointments."
+                                android:textColor="@color/text_secondary"
+                                android:textSize="14sp"
+                                android:gravity="center" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnBookNow"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/button_green_gradient"
+                                android:text="Book Now"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:stateListAnimator="@null"
+                                android:elevation="4dp" />
+
+                        </LinearLayout>
+
+                        <!-- Appointment Details (shown when appointment exists) -->
+                        <LinearLayout
+                            android:id="@+id/layoutApptDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- Date Row -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp">
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvNextApptDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Apr 26, 2026"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                     />
+                            </LinearLayout>
+
+                            <!-- Time Row -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp">
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Time"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvNextApptTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="9:15 AM"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    />
+                            </LinearLayout>
+
+                            <!-- Doctor Row -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp">
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Doctor"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvNextApptDoctor"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Dr. John Smith"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    />
+                            </LinearLayout>
+
+                            <!-- Treatment Row -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="16dp">
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Treatment"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvNextApptTreatment"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Extraction"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                     />
+                            </LinearLayout>
+
+                            <!-- Action Buttons -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnReschedule"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:background="@drawable/button_green_gradient"
+                                    android:text="Reschedule"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp"
+                                    android:textAllCaps="false"
+                                    android:stateListAnimator="@null" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnCancelAppt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="8dp"
+                                    android:background="@drawable/button_red_gradient"
+                                    android:text="Cancel"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp"
+                                    android:textAllCaps="false"
+                                    android:stateListAnimator="@null" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ==================== RECENT APPOINTMENTS CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardRecentAppointments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPadding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNextAppointment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Recent Appointments"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Empty State (shown when no appointments) -->
+                        <LinearLayout
+                            android:id="@+id/layoutNoRecentAppointments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No appointments yet."
+                                android:textColor="@color/text_secondary"
+                                android:textSize="14sp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <!-- Table Content (shown when appointments exist) -->
+                        <LinearLayout
+                            android:id="@+id/layoutRecentApptTable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- Table Header -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="8dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.22"
+                                    android:text="Date"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.18"
+                                    android:text="Time"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.20"
+                                    android:text="Treatment"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.22"
+                                    android:text="Doctor"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.18"
+                                    android:text="Status"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/divider" />
+
+                            <!-- Appointments Container (dynamically filled) -->
+                            <LinearLayout
+                                android:id="@+id/layoutRecentApptRows"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+           <!-- ==================== QUICK ACTIONS CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuickActions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPaddingTop="0dp"
+                app:contentPaddingBottom="0dp"
+                app:contentPaddingLeft="0dp"
+                app:contentPaddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardRecentAppointments"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+
+
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:layout_marginStart="-16dp"
+                        android:layout_marginEnd="-16dp"
+                        android:layout_marginTop="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quick Actions"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Row 1: Book & Queue + Bills -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginBottom="12dp">
+
+                            <!-- Book & Queue Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgeBookQueue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="6dp"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_appointment"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Book &amp; queue"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Schedule or join"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="waitlist"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Bills Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgeBills"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="6dp"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_bills"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Bills"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Payments &amp;"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="invoices"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <!-- Row 2: Dental Chart + Profile -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginBottom="12dp">
+
+                            <!-- Dental Chart Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgeDentalChart"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="6dp"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:elevation="20dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_teeth"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Dental chart"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Tooth chart"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Profile Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgeProfile"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="6dp"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_profile"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Profile"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Your account"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <!-- Row 3: Subscription + Points -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginBottom="12dp">
+
+                            <!-- Subscription Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgeSubscription"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="6dp"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_subscription"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Subscription"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="View plans"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Points Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgePoints"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="6dp"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_points"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Points"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Earn &amp; redeem"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <!-- Row 4: Referrals (Full Width) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Referrals Badge -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badgeReferrals"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="20dp"
+                                app:strokeWidth="0.7dp"
+                                app:strokeColor="@color/divider"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="@color/surface_white"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="12dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_referrals"
+                                        android:tint="@color/accent_yellow" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:text="Referrals"
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="Invite friends &amp; earn points"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="10sp"
+                                        android:gravity="center" />
+
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

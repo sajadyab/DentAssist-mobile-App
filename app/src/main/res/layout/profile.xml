@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ==================== PROFILE HEADER CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProfileHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Background with Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Patient Name - CENTERED -->
+                        <TextView
+                            android:id="@+id/tvPatientName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Fadya Alama"
+                            android:textColor="@color/surface_white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <!-- Username Row - CENTERED -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_user"
+                                android:tint="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/tvUsername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="@fadya1"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <!-- Phone Row - CENTERED -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_phone"
+                                android:tint="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/tvPhoneNbr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="+96170389543"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <!-- Email Row - CENTERED -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_email"
+                                android:tint="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/tvEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="72230640@students.liu.edu.lb"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:alpha="0.3"
+                            android:background="@color/text_primary" />
+
+                        <!-- My Points & Referral Row - Equal Spacing with Larger Margins -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp">
+
+                            <!-- My Points - Left aligned -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start|center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/ic_points"
+                                    android:tint="@color/text_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvNbrOfPoints"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"
+                                    android:text="0 Points"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!-- Referral Code - Right aligned -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end|center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/ic_referrals"
+                                    android:tint="@color/text_primary" />
+
+                                <TextView
+                                    android:id="@+id/tvReferralCodeVal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"
+                                    android:text="Code: 2067B25A"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== PERSONAL INFORMATION CARD ==================== -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPersonalInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPaddingTop="0dp"
+                app:contentPaddingBottom="0dp"
+                app:contentPaddingLeft="0dp"
+                app:contentPaddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardProfileHeader">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header - spans full width with negative margins -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:layout_marginStart="-16dp"
+                        android:layout_marginEnd="-16dp"
+                        android:layout_marginTop="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Personal Information"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content with proper padding -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="8dp">
+
+                        <!-- Full Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Full Name *"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilFullName"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etFullName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:maxLines="1"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Username -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Username *"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilProfileUsername"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etProfileUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:hint="Must be unique"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Date of Birth Label -->
+                        <TextView
+                            android:id="@+id/tvDobLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Date of Birth"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Date of Birth Input (with Calendar Picker + Manual Entry) -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilDob"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:hint="dd/mm/yyyy"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_calendar"
+                            app:endIconCheckable="false"
+                            app:endIconTint="@color/primary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etDob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:maxLines="1"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:clickable="true"
+                                android:longClickable="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Gender Label -->
+                        <TextView
+                            android:id="@+id/tvGenderLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Gender"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Gender Radio Group -->
+                        <RadioGroup
+                            android:id="@+id/radioGroupGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radioFemale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Female"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:buttonTint="@color/primary" />
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radioMale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Male"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"
+                                android:buttonTint="@color/primary" />
+
+                        </RadioGroup>
+
+                        <!-- Contact Information Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Information"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:layout_marginTop="34dp"
+                            android:textStyle="bold" />
+
+                        <!-- ==================== CONTACT INFO (BLUE THICK LINE) ==================== -->
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/primary" />
+
+                        <!-- ==================== CONTACT PHONE ==================== -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Phone Number *"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.example.dentassist.views.PhoneInputView
+                            android:id="@+id/phoneInputContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp" />
+
+                        <!-- Email -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Email Address *"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilEmail"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Address -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Address"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddress"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPostalAddress"
+                                android:maxLines="2"
+                                android:hint="Full address"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Emergency Contact Title -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emergency Contact"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:layout_marginTop="34dp"
+                            android:textStyle="bold" />
+
+                        <!-- ==================== EMERGENCY CONTACT (BLUE THICK LINE) ==================== -->
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/primary" />
+
+                        <!-- Contact Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Contact Name"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilEmergencyName"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmergencyName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:maxLines="1"
+                                android:hint="Full name"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- ==================== EMERGENCY CONTACT PHONE ==================== -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Contact Phone"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.example.dentassist.views.PhoneInputView
+                            android:id="@+id/phoneInputEmergency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp" />
+
+                        <!-- Relationship - TEXT INPUT -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Relationship"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilRelationship"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etRelationship"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:hint="Parent, Sibling..."
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- ==================== SAVE BUTTON ==================== -->
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSaveProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/button_green_gradient"
+                            android:text="Save Profile"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:stateListAnimator="@null"
+                            android:elevation="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== CHANGE PASSWORD CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardChangePassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPaddingTop="0dp"
+                app:contentPaddingBottom="0dp"
+                app:contentPaddingLeft="0dp"
+                app:contentPaddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardPersonalInfo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header - Full Width -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change Password"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content with padding -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Password"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:endIconMode="password_toggle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etCurrentPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Password"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="Minimum 6 characters"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:endIconMode="password_toggle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etNewPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Confirm Password"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:endIconMode="password_toggle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etConfirmPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/cbShowPasswords"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Show Passwords"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnChangePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/button_green_gradient"
+                            android:text="Change Password"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textAllCaps="false"
+                            android:stateListAnimator="@null"
+                            android:elevation="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== REFERRAL SECTION ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReferral"
+                style="@style/Widget.DentAssist.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardChangePassword"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Referral Program"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Share your code and earn 50 points per referral!"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your referral code:"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvReferralCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="2067B25A"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        style="@style/Widget.DentAssist.Button.Outline"
+                        android:id="@+id/buttonCopyCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Copy referral code"
+                        android:textAllCaps="false" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_light">#6CCCF5</color>
+    <color name="primary">#6CA3F5</color>
+    <color name="primary_dark">#5A8ED4</color>
+    <color name="app_bar_blue">#8CC7F1</color>
+
+    <color name="accent_yellow">#FFEB3B</color>
+    <color name="accent_red">#F7331D</color>
+    <color name="accent_green">#53C558</color>
+
+    <color name="background_light">#F8FAFC</color>
+    <color name="surface_white">#FFFFFF</color>
+
+
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="divider">#E2E8F0</color>
+    <color name="status_bar_grey">#64748B</color>
+
+    <!-- Tooth Chart Colors -->
+    <color name="tooth_healthy">#28a745</color>
+    <color name="tooth_cavity">#fd7e14</color>
+    <color name="tooth_filled">#007bff</color>
+    <color name="tooth_crown">#6f42c1</color>
+    <color name="tooth_root_canal">#ffc107</color>
+    <color name="tooth_missing">#6c757d</color>
+    <color name="tooth_implant">#20c997</color>
+    <color name="tooth_bridge">#795548</color>
+
+
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="text_hint">#94A3B8</color>
+
+
+
+</resources>

@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ==================== MAIN HEADER CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMainHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Background with Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <!-- Join Waiting Queue Title with Icon -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_appointment"
+                                android:tint="@color/surface_white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="Join Waiting Queue"
+                                android:textColor="@color/surface_white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="Book a time below or join"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:alpha="0.9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="the walk-in queue"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12sp"
+                            android:alpha="0.9" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== PENDING REQUESTS CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPendingRequests"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPaddingTop="0dp"
+                app:contentPaddingBottom="0dp"
+                app:contentPaddingLeft="0dp"
+                app:contentPaddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardMainHeader">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending requests"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutPendingRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== BOOK A VISIT CALENDAR CARD ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBookVisit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPaddingTop="0dp"
+                app:contentPaddingBottom="0dp"
+                app:contentPaddingLeft="0dp"
+                app:contentPaddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardPendingRequests">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:layout_marginStart="-16dp"
+                        android:layout_marginEnd="-16dp"
+                        android:layout_marginTop="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Book a visit"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap + to request an appointment, you will be notified of your dentist's response via WhatsApp."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- Dentist & Week Controls Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="12dp">
+
+                            <!-- Dentist Label -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dentist"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginEnd="8dp" />
+
+                            <!-- Dentist Spinner - FIXED SIZE -->
+                            <Spinner
+                                android:id="@+id/spinnerCalendarDoctor"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/spinner_background"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:gravity="center_vertical" />
+
+                        </LinearLayout>
+                        <!-- Week Navigation -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="12dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnPrevWeek"
+                                style="@style/Widget.DentAssist.Button.Outline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Prev"
+                                android:textSize="12sp"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp" />
+
+                            <TextView
+                                android:id="@+id/tvWeekRange"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Apr 6 – Apr 12"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnNextWeek"
+                                style="@style/Widget.DentAssist.Button.Outline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Next"
+                                android:textSize="12sp"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnThisWeek"
+                            style="@style/Widget.DentAssist.Button.Outline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="12dp"
+                            android:text="This Week"
+                            android:textSize="12sp"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp" />
+
+                        <!-- Legend -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginBottom="12dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginEnd="16dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_slot_free"
+                                    android:layout_marginEnd="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginEnd="16dp">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_slot_busy"
+                                    android:layout_marginEnd="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Taken"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:background="@drawable/bg_slot_past"
+                                    android:layout_marginEnd="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Past"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layoutCalendarContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== QUEUE REQUEST CARD (WITH NOTES) ==================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQueueRequest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/surface_white"
+                app:contentPaddingTop="0dp"
+                app:contentPaddingBottom="0dp"
+                app:contentPaddingLeft="0dp"
+                app:contentPaddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardBookVisit">
+
+                <!-- ... rest of Queue Request card (unchanged) ... -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Blue Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_light"
+                        android:orientation="horizontal"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:layout_marginStart="-16dp"
+                        android:layout_marginEnd="-16dp"
+                        android:layout_marginTop="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Queue Request"
+                            android:textColor="@color/surface_white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <!-- Subtitle -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Request a slot when no free appointments are available"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- Dentist Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dentist *"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Dentist Dropdown -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:hint="Select Dentist"
+                            android:textColor="@color/text_primary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerDentist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="14sp"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Preferred Date Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Preferred date *"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Preferred Date Input (Today + Future Only) -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPreferredDate"
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:hint="MM/DD/YYYY"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_calendar"
+                            app:endIconCheckable="false"
+                            app:endIconTint="@color/primary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPreferredDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:maxLines="1"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:clickable="true"
+                                android:longClickable="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Date Flexibility Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Date flexibility (optional)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Date Flexibility Input with Suffix -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:suffixText="days">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etDateFlexibility"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:text="0"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Hint Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="± days before or after preferred date"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <!-- Visit Type Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Visit type"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Visit Type Dropdown -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:hint="Select visit type"
+                            android:textColor="@color/text_primary"
+                            android:textCursorDrawable="@color/cursor_black">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerVisitType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                android:textSize="14sp"
+                                android:padding="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Priority Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Priority *"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Priority Spinner -->
+                        <Spinner
+                            android:id="@+id/spinnerPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:entries="@array/priority_options"
+                            android:background="@drawable/spinner_background"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="14dp"
+                            android:paddingBottom="14dp"
+                            android:dropDownWidth="match_parent" />
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/divider" />
+
+                        <!-- Notes Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notes (optional)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Notes Input -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.DentAssist.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:hint="Anything the clinic should know">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etNotes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine"
+                                android:minLines="3"
+                                android:maxLines="5"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:textColor="@color/text_primary"
+                                android:textCursorDrawable="@color/cursor_black"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Buttons Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <!-- Cancel Button -->
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnCancel"
+                                android:background="@drawable/button_red_gradient"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="8dp"
+                                android:textColor="@color/surface_white"
+                                android:text="Cancel"
+                                android:textAllCaps="false" />
+
+                            <!-- Submit Request Button -->
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnSubmitRequest"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:background="@drawable/button_green_gradient"
+                                android:text="Submit"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:stateListAnimator="@null"
+                                android:elevation="4dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== QUEUE INFORMATION CARD ==================== -->
+            <!-- ... (unchanged) ... -->
+
+            <!-- ==================== EMERGENCY CASES CARD ==================== -->
+            <!-- ... (unchanged) ... -->
+
+            <!-- ==================== BEFORE YOUR VISIT CARD ==================== -->
+            <!-- ... (unchanged) ... -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

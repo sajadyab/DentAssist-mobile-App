@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme - LIGHT MODE ONLY (ignores system dark mode) -->
+    <style name="Base.Theme.DentAssist" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+
+        <item name="colorSecondary">@color/accent_green</item>
+        <item name="colorSecondaryVariant">#1EA34E</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorError">@color/accent_red</item>
+        <item name="colorOnError">@color/white</item>
+
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <item name="android:statusBarColor">@color/status_bar_grey</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <!-- Force light mode - ignore system dark theme -->
+        <item name="android:forceDarkAllowed">false</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.DentAssist.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.DentAssist.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.DentAssist.Large</item>
+    </style>
+
+    <!-- Shape appearances -->
+    <style name="ShapeAppearance.DentAssist.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="ShapeAppearance.DentAssist.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="ShapeAppearance.DentAssist.Large" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Theme for Login/Register/Forgot Password screens -->
+    <style name="Theme.DentAssist.Login" parent="Base.Theme.DentAssist">
+        <item name="android:windowBackground">@drawable/gradient_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorSurface">@android:color/transparent</item>
+        <item name="cardBackgroundColor">@color/surface_white</item>
+        <item name="android:statusBarColor">@color/status_bar_grey</item>
+    </style>
+
+</resources>

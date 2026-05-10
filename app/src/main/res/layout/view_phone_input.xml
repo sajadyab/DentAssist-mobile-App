@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Country Code Spinner -->
+    <Spinner
+        android:id="@+id/spinnerCountryCode"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:entries="@array/country_codes"
+        android:background="@drawable/spinner_background"
+        android:paddingStart="8dp"
+        android:paddingEnd="4dp"
+        android:layout_marginEnd="4dp"
+        android:dropDownWidth="150dp"
+        android:gravity="center_vertical" />
+
+    <!-- Phone Number Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.DentAssist.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:hint="@null"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="15"
+            android:textColor="@color/text_primary"
+            android:textCursorDrawable="@color/cursor_black"
+            android:textSize="14sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:gravity="center_vertical"
+            android:hint="Phone number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</merge>
